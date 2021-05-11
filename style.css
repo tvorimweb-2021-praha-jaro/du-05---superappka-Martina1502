@@ -31,3 +31,191 @@ body {
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+nav {
+    font-size: 2rem;
+    color: #48418e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: white;
+    background-color: #48418e;
+}
+
+.menu {
+    text-align: center;
+    width: 50%;
+    padding: 1.5rem 2rem;
+}
+
+.telefon {
+    padding-left: 2rem;
+    visibility: hidden;
+}
+
+.info {
+    background-image: url(images/pozadi.jpg);
+    background-size: cover;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.moznosti {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.info p{
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.tlacitka {
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin: 1rem 0;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.stahnout {
+    background-color: #48418e;
+}
+
+.stahnout:hover {
+    background-color: transparent;
+}
+
+.vice:hover {
+    background-color: #48418e;
+}
+
+.ikona {
+    width: 15%;
+}
+
+.podrobnosti {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+h2 {
+    color: #48418e;
+}
+
+.aktivity {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.aktivity p {
+    font-size: 1.2rem;
+}
+
+footer {
+    font-size: 2rem;
+    background-color: #48418e;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media only screen and (min-device-width: 400px) {
+    nav {
+        font-size: 1.7rem;
+    }
+    .moznosti {
+        flex-direction: row;
+    }
+    .tlacitka {
+        margin: 1rem 1rem 1rem 0;
+    }
+    footer {
+        font-size: 1rem;
+    }
+
+    .info p {
+        font-size: 3rem;
+    }
+
+    .aktivity p {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-device-width: 600px) {
+    nav {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        font-size: 1.4rem;
+    }
+
+    .menu {
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .podrobnosti {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        .aktivity {
+            margin: 1rem;
+        }
+}
+
+@media only screen and (min-device-width: 750px) {
+    nav {
+        font-size: 1.2rem;
+    }
+    .info {
+    background-image: url(images/telefon.png), url(images/pozadi.jpg);
+    background-size: 40%, cover;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    }
+
+    .info p {
+        width: 60%;
+    }
+
+    .tlacitka {
+        font-size: 1.1rem;
+    }
+
+    .podrobnosti {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .aktivity p {
+        font-size: 1.2rem;
+    }
+    
+}
