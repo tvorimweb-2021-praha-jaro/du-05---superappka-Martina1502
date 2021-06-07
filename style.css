@@ -24,7 +24,7 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    max-width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
     margin: 0 auto; /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -33,11 +33,9 @@ body {
 /* ----- zde začni psát vlastní CSS ----- */
 
 nav {
-    font-size: 2rem;
     color: #48418e;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 a {
@@ -59,16 +57,18 @@ a:hover {
     padding: 1.5rem 2rem;
 }
 
-.telefon {
-    padding-left: 2rem;
-    visibility: hidden;
+.phone {
+    display: none;
 }
 
 .info {
-    background-image: url(images/pozadi.jpg);
+    background: #FFB6C2;
+    background: -webkit-radial-gradient(right, #FFB6C2, #000080);
+    background: -moz-radial-gradient(right, #FFB6C2, #000080);
+    background: radial-gradient(to left, #FFB6C2, #000080);
     background-size: cover;
     color: white;
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,22 +81,21 @@ a:hover {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin: 0;
 }
 
 .info p{
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight: 300;
     margin: 1.5rem 0;
 }
 
 .tlacitka {
-    font-size: 1.7rem;
     padding: 1rem 3rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     border: 3px solid white;
     border-radius: 15px;
 }
@@ -122,7 +121,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 0.5rem 1rem;
 }
 
 h2 {
@@ -131,7 +130,7 @@ h2 {
 
 .aktivity {
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .aktivity p {
@@ -139,15 +138,17 @@ h2 {
 }
 
 footer {
-    font-size: 2rem;
     background-color: #48418e;
     color: white;
     padding: 1rem 0;
     text-align: center;
 }
 
-@media only screen and (min-device-width: 400px) {
-    nav {
+@media only screen and (min-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .info p {
         font-size: 1.7rem;
     }
     .moznosti {
@@ -159,48 +160,46 @@ footer {
     footer {
         font-size: 1rem;
     }
-
-    .info p {
-        font-size: 3rem;
-    }
-
     .aktivity p {
         font-size: 1.2rem;
     }
 }
 
-@media only screen and (min-device-width: 600px) {
+@media only screen and (min-width: 600px) {
     nav {
+        font-size: 1.1rem;
         flex-wrap: nowrap;
         justify-content: flex-start;
-        font-size: 1.4rem;
     }
-
     .menu {
-        padding: 1rem;
+        padding: 0.5rem;
         text-align: left;
+    }
+    .moznosti {
+        margin: 0;
     }
 
     .podrobnosti {
         flex-direction: row;
         justify-content: space-between;
     }
-        .aktivity {
-            margin: 1rem;
-        }
+    .aktivity {
+        margin: 1rem;
+    }
 }
 
-@media only screen and (min-device-width: 750px) {
+@media only screen and (min-width: 750px) {
     nav {
         font-size: 1.2rem;
     }
     .info {
-    background-image: url(images/telefon.png), url(images/pozadi.jpg);
-    background-size: 40%, cover;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        padding: 2rem 0 0 2rem;
     }
-
+    .phone {
+        display: flex;
+    }
     .info p {
         width: 60%;
     }
